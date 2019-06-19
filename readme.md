@@ -1,6 +1,4 @@
-Panomaker tour embed script
-
-* * *
+# Panomaker tour embed script
 
 ## Usage
 
