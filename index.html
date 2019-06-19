@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<title>panomaker js embed</title>
+
+		<style type="text/css">
+			.panomaker-wrapper {
+				position: relative;
+			}
+			.panomaker-iframe {}
+			.panomaker-button {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				top: 50%;
+				margin-top: -9px;
+				cursor: pointer;
+			}
+
+			.panomaker-button div {
+				border: 1px solid;
+				display: inline;
+				padding: 7px 20px;
+				background: rgba(255,255,255,0.8);
+
+				transition: box-shadow .5s,transform .5s,-webkit-transform .5s;
+			}
+
+			.panomaker-button div:hover {
+			    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,.4);
+			    text-decoration: none;
+			    -webkit-transform: translateY(-.1875rem);
+			    transform: translateY(-.1875rem);
+			}
+
+			.panomaker-link {}
+		</style>
+	</head>
+	<body>
+		<main>
+			<article>
+				<div id="meine_tour"></div>
+			</article>
+		</main>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./panomaker.embed.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$( "#meine_tour" ).panomaker({
+					tour_url: "https://cms.panomaker.de/de/vt/gpnNCNqlHW/d/45913/siv/1/rm/1/hiho/11"
+					button_url: "https://cms.panomaker.de/de/vt/gpnNCNqlHW/d/45919/siv/1" // optional. If leave blank the tour-url will be used.
+				});
+			});
+		</script>
+	</body>
+</html>
